@@ -1,0 +1,1256 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+        
+        href="https://github.com/cheeriojs/cheerio#readme"
+        
+    >cheerio (v0.22.0)</a>
+</h1>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.cheerio">module cheerio</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.contains">
+            function <span class="apidocSignatureSpan">cheerio.</span>contains
+            <span class="apidocSignatureSpan">(container, contained)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.html">
+            function <span class="apidocSignatureSpan">cheerio.</span>html
+            <span class="apidocSignatureSpan">(dom, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.load">
+            function <span class="apidocSignatureSpan">cheerio.</span>load
+            <span class="apidocSignatureSpan">(content, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse">
+            function <span class="apidocSignatureSpan">cheerio.</span>parse
+            <span class="apidocSignatureSpan">(content, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.parseHTML">
+            function <span class="apidocSignatureSpan">cheerio.</span>parseHTML
+            <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.root">
+            function <span class="apidocSignatureSpan">cheerio.</span>root
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.text">
+            function <span class="apidocSignatureSpan">cheerio.</span>text
+            <span class="apidocSignatureSpan">(elems)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.xml">
+            function <span class="apidocSignatureSpan">cheerio.</span>xml
+            <span class="apidocSignatureSpan">(dom)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cheerio.</span>static</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cheerio.</span>utils</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cheerio.</span>version</span>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.parse">module cheerio.parse</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.parse">
+            function <span class="apidocSignatureSpan">cheerio.</span>parse
+            <span class="apidocSignatureSpan">(content, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.evaluate">
+            function <span class="apidocSignatureSpan">cheerio.parse.</span>evaluate
+            <span class="apidocSignatureSpan">(content, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.update">
+            function <span class="apidocSignatureSpan">cheerio.parse.</span>update
+            <span class="apidocSignatureSpan">(arr, parent)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.static">module cheerio.static</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.contains">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>contains
+            <span class="apidocSignatureSpan">(container, contained)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.html">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>html
+            <span class="apidocSignatureSpan">(dom, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.load">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>load
+            <span class="apidocSignatureSpan">(content, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.parseHTML">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>parseHTML
+            <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.root">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>root
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.text">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>text
+            <span class="apidocSignatureSpan">(elems)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.xml">
+            function <span class="apidocSignatureSpan">cheerio.static.</span>xml
+            <span class="apidocSignatureSpan">(dom)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.utils">module cheerio.utils</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.camelCase">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>camelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.cloneDom">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>cloneDom
+            <span class="apidocSignatureSpan">(dom, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.cssCase">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>cssCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.domEach">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>domEach
+            <span class="apidocSignatureSpan">(cheerio, fn)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.isHtml">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>isHtml
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.isTag">
+            function <span class="apidocSignatureSpan">cheerio.utils.</span>isTag
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cheerio" id="apidoc.module.cheerio">module cheerio</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.contains" id="apidoc.element.cheerio.contains">
+        function <span class="apidocSignatureSpan">cheerio.</span>contains
+        <span class="apidocSignatureSpan">(container, contained)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contains = function (container, contained) {
+
+  // According to the jQuery API, an element does not &#x22;contain&#x22; itself
+  if (contained === container) {
+    return false;
+  }
+
+  // Step up the descendants, stopping when the root element is reached
+  // (signaled by `.parent` returning a reference to the same object)
+  while (contained &#x26;&#x26; contained !== contained.parent) {
+    contained = contained.parent;
+    if (contained === container) {
+      return true;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Sometimes you need to work with the top-level root element. To query it, you can use `$.root()`.
+
+```js
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.<span class="apidocCodeKeywordSpan">contains</span>( container, contained )
+Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
+
+#### $.parseHTML( data [, context ] [, keepScripts ] )
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
+atability.
+
+#### $.load( html[, options ] )
+Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.html" id="apidoc.element.cheerio.html">
+        function <span class="apidocSignatureSpan">cheerio.</span>html
+        <span class="apidocSignatureSpan">(dom, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">html = function (dom, options) {
+  var Cheerio = require(&#x27;./cheerio&#x27;);
+
+  // be flexible about parameters, sometimes we call html(),
+  // with options as only parameter
+  // check dom argument for dom element specific properties
+  // assume there is no &#x27;length&#x27; or &#x27;type&#x27; properties in the options object
+  if (Object.prototype.toString.call(dom) === &#x27;[object Object]&#x27; &#x26;&#x26; !options &#x26;&#x26; !(&#x27;length&#x27; in dom) &#x26;&#x26; !(&#x27;type&#x27; in dom))
+  {
+    options = dom;
+    dom = undefined;
+  }
+
+  // sometimes $.html() used without preloading html
+  // so fallback non existing options to the default ones
+  options = _.defaults(options || {}, this._options, Cheerio.prototype.options);
+
+  return render(this, dom, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.<span class="apidocCodeKeywordSpan">html</span>()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+
+## Installation
+`npm install cheerio`
+
+## Features
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.load" id="apidoc.element.cheerio.load">
+        function <span class="apidocSignatureSpan">cheerio.</span>load
+        <span class="apidocSignatureSpan">(content, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (content, options) {
+  var Cheerio = require(&#x27;./cheerio&#x27;);
+
+  options = _.defaults(options || {}, Cheerio.prototype.options);
+
+  var root = parse(content, options);
+
+  var initialize = function(selector, context, r, opts) {
+    if (!(this instanceof initialize)) {
+      return new initialize(selector, context, r, opts);
+    }
+    opts = _.defaults(opts || {}, options);
+    return Cheerio.call(this, selector, context, r || root, opts);
+  };
+
+  // Ensure that selections created by the &#x22;loaded&#x22; `initialize` function are
+  // true Cheerio instances.
+  initialize.prototype = Object.create(Cheerio.prototype);
+  initialize.prototype.constructor = initialize;
+
+  // Mimic jQuery&#x27;s prototype alias for plugin authors.
+  initialize.fn = initialize.prototype;
+
+  // Keep a reference to the top-level scope so we can chain methods that implicitly
+  // resolve selectors; e.g. $(&#x22;&#x3c;span&#x3e;&#x22;).(&#x22;.bar&#x22;), which otherwise loses ._root
+  initialize.prototype._originalRoot = root;
+
+  // Add in the static methods
+  _.merge(initialize, exports);
+
+  // Add in the root
+  initialize._root = root;
+  // store options
+  initialize._options = options;
+
+  return initialize;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x3c;/a&#x3e;
+&#x3c;/div&#x3e;
+
+&#x3c;br /&#x3e;
+
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2\
+&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.html()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.parse" id="apidoc.element.cheerio.parse">
+        function <span class="apidocSignatureSpan">cheerio.</span>parse
+        <span class="apidocSignatureSpan">(content, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (content, options) {
+  var dom = exports.evaluate(content, options),
+      // Generic root element
+      root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+
+  root.type = &#x27;root&#x27;;
+
+  // Update the dom using the root
+  exports.update(dom, root);
+
+  return root;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.parseHTML" id="apidoc.element.cheerio.parseHTML">
+        function <span class="apidocSignatureSpan">cheerio.</span>parseHTML
+        <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseHTML = function (data, context, keepScripts) {
+  var parsed;
+
+  if (!data || typeof data !== &#x27;string&#x27;) {
+    return null;
+  }
+
+  if (typeof context === &#x27;boolean&#x27;) {
+    keepScripts = context;
+  }
+
+  parsed = this.load(data);
+  if (!keepScripts) {
+    parsed(&#x27;script&#x27;).remove();
+  }
+
+  // The `children` array is used by Cheerio internally to group elements that
+  // share the same parents. When nodes created through `parseHTML` are
+  // inserted into previously-existing DOM structures, they will be removed
+  // from the `children` array. The results of `parseHTML` should remain
+  // constant across these operations, so a shallow copy should be returned.
+  return parsed.root()[0].children.slice();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.contains( container, contained )
+Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
+
+#### $.<span class="apidocCodeKeywordSpan">parseHTML</span>( data [, context ] [, keepScripts ] )
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
+atability.
+
+#### $.load( html[, options ] )
+Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+
+### Plugins
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.root" id="apidoc.element.cheerio.root">
+        function <span class="apidocSignatureSpan">cheerio.</span>root
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">root = function () {
+  return this(this._root);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var moreFruit = $(&#x27;#fruits&#x27;).clone()
+```
+
+### Utilities
+
+#### $.root
+
+Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root\
+</span>()`.
+
+```js
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.contains( container, contained )
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.text" id="apidoc.element.cheerio.text">
+        function <span class="apidocSignatureSpan">cheerio.</span>text
+        <span class="apidocSignatureSpan">(elems)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function (elems) {
+  if (!elems) {
+    elems = this.root();
+  }
+
+  var ret = &#x27;&#x27;,
+      len = elems.length,
+      elem;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    elem = elems[i];
+    if (elem.type === &#x27;text&#x27;) ret += elem.data;
+    else if (elem.children &#x26;&#x26; elem.type !== &#x27;comment&#x27;) {
+      ret += exports.text(elem.children);
+    }
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+&#x3c;br /&#x3e;
+
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).<span class="apidocCodeKeywordSpan">text</span>(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.html()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+
+## Installation
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.xml" id="apidoc.element.cheerio.xml">
+        function <span class="apidocSignatureSpan">cheerio.</span>xml
+        <span class="apidocSignatureSpan">(dom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xml = function (dom) {
+  var options = _.defaults({xmlMode: true}, this._options);
+
+  return render(this, dom, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```xml
+$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;5\
+0&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
+```
+
+... and later want to render to XML. To do this, you can use the &#x27;xml&#x27; utility function:
+
+```js
+$.<span class="apidocCodeKeywordSpan">xml</span>()
+//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time\
+=&#x22;12:05:01.123&#x22;/&#x3e;
+```
+
+You may also render the text content of a Cheerio object using the `text` static method:
+
+```js
+$ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
+...</pre></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cheerio.parse" id="apidoc.module.cheerio.parse">module cheerio.parse</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.parse.parse" id="apidoc.element.cheerio.parse.parse">
+        function <span class="apidocSignatureSpan">cheerio.</span>parse
+        <span class="apidocSignatureSpan">(content, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (content, options) {
+  var dom = exports.evaluate(content, options),
+      // Generic root element
+      root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+
+  root.type = &#x27;root&#x27;;
+
+  // Update the dom using the root
+  exports.update(dom, root);
+
+  return root;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.parse.evaluate" id="apidoc.element.cheerio.parse.evaluate">
+        function <span class="apidocSignatureSpan">cheerio.parse.</span>evaluate
+        <span class="apidocSignatureSpan">(content, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">evaluate = function (content, options) {
+  // options = options || $.fn.options;
+
+  var dom;
+
+  if (typeof content === &#x27;string&#x27; || Buffer.isBuffer(content)) {
+    dom = htmlparser.parseDOM(content, options);
+  } else {
+    dom = content;
+  }
+
+  return dom;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+var htmlparser = require(&#x27;htmlparser2&#x27;);
+
+/*
+Parser
+*/
+exports = module.exports = function(content, options) {
+var dom = exports.<span class="apidocCodeKeywordSpan">evaluate</span>(content, options),
+    // Generic root element
+    root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+
+root.type = &#x27;root&#x27;;
+
+// Update the dom using the root
+exports.update(dom, root);
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.parse.update" id="apidoc.element.cheerio.parse.update">
+        function <span class="apidocSignatureSpan">cheerio.parse.</span>update
+        <span class="apidocSignatureSpan">(arr, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (arr, parent) {
+  // normalize
+  if (!Array.isArray(arr)) arr = [arr];
+
+  // Update parent
+  if (parent) {
+    parent.children = arr;
+  } else {
+    parent = null;
+  }
+
+  // Update neighbors
+  for (var i = 0; i &#x3c; arr.length; i++) {
+    var node = arr[i];
+
+    // Cleanly remove existing nodes from their previous structures.
+    var oldParent = node.parent || node.root,
+        oldSiblings = oldParent &#x26;&#x26; oldParent.children;
+    if (oldSiblings &#x26;&#x26; oldSiblings !== arr) {
+      oldSiblings.splice(oldSiblings.indexOf(node), 1);
+      if (node.prev) {
+        node.prev.next = node.next;
+      }
+      if (node.next) {
+        node.next.prev = node.prev;
+      }
+    }
+
+    if (parent) {
+      node.prev = arr[i - 1] || null;
+      node.next = arr[i + 1] || null;
+    } else {
+      node.prev = node.next = null;
+    }
+
+    if (parent &#x26;&#x26; parent.type === &#x27;root&#x27;) {
+      node.root = parent;
+      node.parent = null;
+    } else {
+      node.root = null;
+      node.parent = parent;
+    }
+  }
+
+  return parent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dom = exports.evaluate(content, options),
+    // Generic root element
+    root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+
+root.type = &#x27;root&#x27;;
+
+// Update the dom using the root
+exports.<span class="apidocCodeKeywordSpan">update</span>(dom, root);
+
+return root;
+};
+
+exports.evaluate = function(content, options) {
+// options = options || $.fn.options;
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cheerio.static" id="apidoc.module.cheerio.static">module cheerio.static</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.contains" id="apidoc.element.cheerio.static.contains">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>contains
+        <span class="apidocSignatureSpan">(container, contained)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contains = function (container, contained) {
+
+  // According to the jQuery API, an element does not &#x22;contain&#x22; itself
+  if (contained === container) {
+    return false;
+  }
+
+  // Step up the descendants, stopping when the root element is reached
+  // (signaled by `.parent` returning a reference to the same object)
+  while (contained &#x26;&#x26; contained !== contained.parent) {
+    contained = contained.parent;
+    if (contained === container) {
+      return true;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Sometimes you need to work with the top-level root element. To query it, you can use `$.root()`.
+
+```js
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.<span class="apidocCodeKeywordSpan">contains</span>( container, contained )
+Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
+
+#### $.parseHTML( data [, context ] [, keepScripts ] )
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
+atability.
+
+#### $.load( html[, options ] )
+Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.html" id="apidoc.element.cheerio.static.html">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>html
+        <span class="apidocSignatureSpan">(dom, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">html = function (dom, options) {
+  var Cheerio = require(&#x27;./cheerio&#x27;);
+
+  // be flexible about parameters, sometimes we call html(),
+  // with options as only parameter
+  // check dom argument for dom element specific properties
+  // assume there is no &#x27;length&#x27; or &#x27;type&#x27; properties in the options object
+  if (Object.prototype.toString.call(dom) === &#x27;[object Object]&#x27; &#x26;&#x26; !options &#x26;&#x26; !(&#x27;length&#x27; in dom) &#x26;&#x26; !(&#x27;type&#x27; in dom))
+  {
+    options = dom;
+    dom = undefined;
+  }
+
+  // sometimes $.html() used without preloading html
+  // so fallback non existing options to the default ones
+  options = _.defaults(options || {}, this._options, Cheerio.prototype.options);
+
+  return render(this, dom, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.<span class="apidocCodeKeywordSpan">html</span>()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+
+## Installation
+`npm install cheerio`
+
+## Features
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.load" id="apidoc.element.cheerio.static.load">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>load
+        <span class="apidocSignatureSpan">(content, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (content, options) {
+  var Cheerio = require(&#x27;./cheerio&#x27;);
+
+  options = _.defaults(options || {}, Cheerio.prototype.options);
+
+  var root = parse(content, options);
+
+  var initialize = function(selector, context, r, opts) {
+    if (!(this instanceof initialize)) {
+      return new initialize(selector, context, r, opts);
+    }
+    opts = _.defaults(opts || {}, options);
+    return Cheerio.call(this, selector, context, r || root, opts);
+  };
+
+  // Ensure that selections created by the &#x22;loaded&#x22; `initialize` function are
+  // true Cheerio instances.
+  initialize.prototype = Object.create(Cheerio.prototype);
+  initialize.prototype.constructor = initialize;
+
+  // Mimic jQuery&#x27;s prototype alias for plugin authors.
+  initialize.fn = initialize.prototype;
+
+  // Keep a reference to the top-level scope so we can chain methods that implicitly
+  // resolve selectors; e.g. $(&#x22;&#x3c;span&#x3e;&#x22;).(&#x22;.bar&#x22;), which otherwise loses ._root
+  initialize.prototype._originalRoot = root;
+
+  // Add in the static methods
+  _.merge(initialize, exports);
+
+  // Add in the root
+  initialize._root = root;
+  // store options
+  initialize._options = options;
+
+  return initialize;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x3c;/a&#x3e;
+&#x3c;/div&#x3e;
+
+&#x3c;br /&#x3e;
+
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2\
+&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.html()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.parseHTML" id="apidoc.element.cheerio.static.parseHTML">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>parseHTML
+        <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseHTML = function (data, context, keepScripts) {
+  var parsed;
+
+  if (!data || typeof data !== &#x27;string&#x27;) {
+    return null;
+  }
+
+  if (typeof context === &#x27;boolean&#x27;) {
+    keepScripts = context;
+  }
+
+  parsed = this.load(data);
+  if (!keepScripts) {
+    parsed(&#x27;script&#x27;).remove();
+  }
+
+  // The `children` array is used by Cheerio internally to group elements that
+  // share the same parents. When nodes created through `parseHTML` are
+  // inserted into previously-existing DOM structures, they will be removed
+  // from the `children` array. The results of `parseHTML` should remain
+  // constant across these operations, so a shallow copy should be returned.
+  return parsed.root()[0].children.slice();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.contains( container, contained )
+Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
+
+#### $.<span class="apidocCodeKeywordSpan">parseHTML</span>( data [, context ] [, keepScripts ] )
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
+atability.
+
+#### $.load( html[, options ] )
+Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+
+### Plugins
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.root" id="apidoc.element.cheerio.static.root">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>root
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">root = function () {
+  return this(this._root);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var moreFruit = $(&#x27;#fruits&#x27;).clone()
+```
+
+### Utilities
+
+#### $.root
+
+Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root\
+</span>()`.
+
+```js
+$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
+//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+```
+
+#### $.contains( container, contained )
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.text" id="apidoc.element.cheerio.static.text">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>text
+        <span class="apidocSignatureSpan">(elems)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function (elems) {
+  if (!elems) {
+    elems = this.root();
+  }
+
+  var ret = &#x27;&#x27;,
+      len = elems.length,
+      elem;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    elem = elems[i];
+    if (elem.type === &#x27;text&#x27;) ret += elem.data;
+    else if (elem.children &#x26;&#x26; elem.type !== &#x27;comment&#x27;) {
+      ret += exports.text(elem.children);
+    }
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+&#x3c;br /&#x3e;
+
+```js
+let cheerio = require(&#x27;cheerio&#x27;)
+let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+
+$(&#x27;h2.title&#x27;).<span class="apidocCodeKeywordSpan">text</span>(&#x27;Hello there!&#x27;)
+$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+
+$.html()
+//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+```
+
+## Installation
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.static.xml" id="apidoc.element.cheerio.static.xml">
+        function <span class="apidocSignatureSpan">cheerio.static.</span>xml
+        <span class="apidocSignatureSpan">(dom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xml = function (dom) {
+  var options = _.defaults({xmlMode: true}, this._options);
+
+  return render(this, dom, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```xml
+$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;5\
+0&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
+```
+
+... and later want to render to XML. To do this, you can use the &#x27;xml&#x27; utility function:
+
+```js
+$.<span class="apidocCodeKeywordSpan">xml</span>()
+//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time\
+=&#x22;12:05:01.123&#x22;/&#x3e;
+```
+
+You may also render the text content of a Cheerio object using the `text` static method:
+
+```js
+$ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cheerio.utils" id="apidoc.module.cheerio.utils">module cheerio.utils</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.camelCase" id="apidoc.element.cheerio.utils.camelCase">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>camelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">camelCase = function (str) {
+  return str.replace(/[_.-](\w|$)/g, function(_, x) {
+    return x.toUpperCase();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.cloneDom" id="apidoc.element.cheerio.utils.cloneDom">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>cloneDom
+        <span class="apidocSignatureSpan">(dom, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cloneDom = function (dom, options) {
+  return parse(render(dom, options), options).children;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.cssCase" id="apidoc.element.cheerio.utils.cssCase">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>cssCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cssCase = function (str) {
+  return str.replace(/[A-Z]/g, &#x27;-$&#x26;&#x27;).toLowerCase();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.domEach" id="apidoc.element.cheerio.utils.domEach">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>domEach
+        <span class="apidocSignatureSpan">(cheerio, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">domEach = function (cheerio, fn) {
+  var i = 0, len = cheerio.length;
+  while (i &#x3c; len &#x26;&#x26; fn.call(cheerio, i, cheerio[i]) !== false) ++i;
+  return cheerio;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.isHtml" id="apidoc.element.cheerio.utils.isHtml">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>isHtml
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHtml = function (str) {
+  // Faster than running regex, if str starts with `&#x3c;` and ends with `&#x3e;`, assume it&#x27;s HTML
+  if (str.charAt(0) === &#x27;&#x3c;&#x27; &#x26;&#x26; str.charAt(str.length - 1) === &#x27;&#x3e;&#x27; &#x26;&#x26; str.length &#x3e;= 3) return true;
+
+  // Run the regex
+  var match = quickExpr.exec(str);
+  return !!(match &#x26;&#x26; match[1]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.cheerio.utils.isTag" id="apidoc.element.cheerio.utils.isTag">
+        function <span class="apidocSignatureSpan">cheerio.utils.</span>isTag
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTag = function (type) {
+  if (type.type) type = type.type;
+  return tags[type] || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
