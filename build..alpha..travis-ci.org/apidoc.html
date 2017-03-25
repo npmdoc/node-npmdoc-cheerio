@@ -46,274 +46,275 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/cheeriojs/cheerio#readme"
-        
+
     >cheerio (v0.22.0)</a>
 </h1>
+<h4>Tiny, fast, and elegant implementation of core jQuery designed specifically for the server</h4>
 <div class="apidocSectionDiv"><a
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.cheerio">module cheerio</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.contains">
             function <span class="apidocSignatureSpan">cheerio.</span>contains
             <span class="apidocSignatureSpan">(container, contained)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.html">
             function <span class="apidocSignatureSpan">cheerio.</span>html
             <span class="apidocSignatureSpan">(dom, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.load">
             function <span class="apidocSignatureSpan">cheerio.</span>load
             <span class="apidocSignatureSpan">(content, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse">
             function <span class="apidocSignatureSpan">cheerio.</span>parse
             <span class="apidocSignatureSpan">(content, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.parseHTML">
             function <span class="apidocSignatureSpan">cheerio.</span>parseHTML
             <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.root">
             function <span class="apidocSignatureSpan">cheerio.</span>root
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.text">
             function <span class="apidocSignatureSpan">cheerio.</span>text
             <span class="apidocSignatureSpan">(elems)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.xml">
             function <span class="apidocSignatureSpan">cheerio.</span>xml
             <span class="apidocSignatureSpan">(dom)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cheerio.</span>static</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cheerio.</span>utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cheerio.</span>version</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.parse">module cheerio.parse</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.parse">
             function <span class="apidocSignatureSpan">cheerio.</span>parse
             <span class="apidocSignatureSpan">(content, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.evaluate">
             function <span class="apidocSignatureSpan">cheerio.parse.</span>evaluate
             <span class="apidocSignatureSpan">(content, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.parse.update">
             function <span class="apidocSignatureSpan">cheerio.parse.</span>update
             <span class="apidocSignatureSpan">(arr, parent)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.static">module cheerio.static</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.contains">
             function <span class="apidocSignatureSpan">cheerio.static.</span>contains
             <span class="apidocSignatureSpan">(container, contained)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.html">
             function <span class="apidocSignatureSpan">cheerio.static.</span>html
             <span class="apidocSignatureSpan">(dom, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.load">
             function <span class="apidocSignatureSpan">cheerio.static.</span>load
             <span class="apidocSignatureSpan">(content, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.parseHTML">
             function <span class="apidocSignatureSpan">cheerio.static.</span>parseHTML
             <span class="apidocSignatureSpan">(data, context, keepScripts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.root">
             function <span class="apidocSignatureSpan">cheerio.static.</span>root
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.text">
             function <span class="apidocSignatureSpan">cheerio.static.</span>text
             <span class="apidocSignatureSpan">(elems)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.static.xml">
             function <span class="apidocSignatureSpan">cheerio.static.</span>xml
             <span class="apidocSignatureSpan">(dom)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.cheerio.utils">module cheerio.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.camelCase">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>camelCase
             <span class="apidocSignatureSpan">(str)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.cloneDom">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>cloneDom
             <span class="apidocSignatureSpan">(dom, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.cssCase">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>cssCase
             <span class="apidocSignatureSpan">(str)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.domEach">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>domEach
             <span class="apidocSignatureSpan">(cheerio, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.isHtml">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>isHtml
             <span class="apidocSignatureSpan">(str)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.cheerio.utils.isTag">
             function <span class="apidocSignatureSpan">cheerio.utils.</span>isTag
             <span class="apidocSignatureSpan">(type)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cheerio" id="apidoc.module.cheerio">module cheerio</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.cheerio.contains" id="apidoc.element.cheerio.contains">
         function <span class="apidocSignatureSpan">cheerio.</span>contains
@@ -351,16 +352,16 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
 
 #### $.parseHTML( data [, context ] [, keepScripts ] )
-Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
-atability.
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API compatability
+.
 
 #### $.load( html[, options ] )
 Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.html" id="apidoc.element.cheerio.html">
         function <span class="apidocSignatureSpan">cheerio.</span>html
@@ -405,9 +406,9 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
 ## Features
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.load" id="apidoc.element.cheerio.load">
         function <span class="apidocSignatureSpan">cheerio.</span>load
@@ -460,7 +461,7 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
 
 ```js
 let cheerio = require(&#x27;cheerio&#x27;)
-let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2\
+let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2
 &#x3e;&#x27;)
 
 $(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
@@ -471,9 +472,9 @@ $.html()
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.parse" id="apidoc.element.cheerio.parse">
         function <span class="apidocSignatureSpan">cheerio.</span>parse
@@ -495,9 +496,9 @@ $.html()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.parseHTML" id="apidoc.element.cheerio.parseHTML">
         function <span class="apidocSignatureSpan">cheerio.</span>parseHTML
@@ -537,8 +538,8 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
 
 #### $.<span class="apidocCodeKeywordSpan">parseHTML</span>( data [, context ] [, keepScripts ] )
-Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
-atability.
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API compatability
+.
 
 #### $.load( html[, options ] )
 Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
@@ -546,9 +547,9 @@ Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more 
 ### Plugins
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.root" id="apidoc.element.cheerio.root">
         function <span class="apidocSignatureSpan">cheerio.</span>root
@@ -567,7 +568,7 @@ var moreFruit = $(&#x27;#fruits&#x27;).clone()
 
 #### $.root
 
-Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root\
+Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root
 </span>()`.
 
 ```js
@@ -578,9 +579,9 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 #### $.contains( container, contained )
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.text" id="apidoc.element.cheerio.text">
         function <span class="apidocSignatureSpan">cheerio.</span>text
@@ -625,9 +626,9 @@ $.html()
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.xml" id="apidoc.element.cheerio.xml">
         function <span class="apidocSignatureSpan">cheerio.</span>xml
@@ -642,15 +643,15 @@ $.html()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```xml
-$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;5\
-0&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
+$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50
+&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
 ```
 
 ... and later want to render to XML. To do this, you can use the &#x27;xml&#x27; utility function:
 
 ```js
 $.<span class="apidocCodeKeywordSpan">xml</span>()
-//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time\
+//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time
 =&#x22;12:05:01.123&#x22;/&#x3e;
 ```
 
@@ -660,20 +661,20 @@ You may also render the text content of a Cheerio object using the `text` static
 $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cheerio.parse" id="apidoc.module.cheerio.parse">module cheerio.parse</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.cheerio.parse.parse" id="apidoc.element.cheerio.parse.parse">
         function <span class="apidocSignatureSpan">cheerio.</span>parse
@@ -695,9 +696,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.parse.evaluate" id="apidoc.element.cheerio.parse.evaluate">
         function <span class="apidocSignatureSpan">cheerio.parse.</span>evaluate
@@ -736,9 +737,9 @@ root.type = &#x27;root&#x27;;
 exports.update(dom, root);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.parse.update" id="apidoc.element.cheerio.parse.update">
         function <span class="apidocSignatureSpan">cheerio.parse.</span>update
@@ -809,14 +810,14 @@ exports.evaluate = function(content, options) {
 // options = options || $.fn.options;
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cheerio.static" id="apidoc.module.cheerio.static">module cheerio.static</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.contains" id="apidoc.element.cheerio.static.contains">
         function <span class="apidocSignatureSpan">cheerio.static.</span>contains
@@ -854,16 +855,16 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
 
 #### $.parseHTML( data [, context ] [, keepScripts ] )
-Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
-atability.
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API compatability
+.
 
 #### $.load( html[, options ] )
 Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.html" id="apidoc.element.cheerio.static.html">
         function <span class="apidocSignatureSpan">cheerio.static.</span>html
@@ -908,9 +909,9 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
 ## Features
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.load" id="apidoc.element.cheerio.static.load">
         function <span class="apidocSignatureSpan">cheerio.static.</span>load
@@ -963,7 +964,7 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
 
 ```js
 let cheerio = require(&#x27;cheerio&#x27;)
-let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2\
+let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2
 &#x3e;&#x27;)
 
 $(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
@@ -974,9 +975,9 @@ $.html()
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.parseHTML" id="apidoc.element.cheerio.static.parseHTML">
         function <span class="apidocSignatureSpan">cheerio.static.</span>parseHTML
@@ -1016,8 +1017,8 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 Checks to see if the `contained` DOM element is a descendant of the `container` DOM element.
 
 #### $.<span class="apidocCodeKeywordSpan">parseHTML</span>( data [, context ] [, keepScripts ] )
-Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API comp\
-atability.
+Parses a string into an array of DOM nodes. The `context` argument has no meaning for Cheerio, but it is maintained for API compatability
+.
 
 #### $.load( html[, options ] )
 Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
@@ -1025,9 +1026,9 @@ Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more 
 ### Plugins
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.root" id="apidoc.element.cheerio.static.root">
         function <span class="apidocSignatureSpan">cheerio.static.</span>root
@@ -1046,7 +1047,7 @@ var moreFruit = $(&#x27;#fruits&#x27;).clone()
 
 #### $.root
 
-Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root\
+Sometimes you need to work with the top-level root element. To query it, you can use `$.<span class="apidocCodeKeywordSpan">root
 </span>()`.
 
 ```js
@@ -1057,9 +1058,9 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 #### $.contains( container, contained )
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.text" id="apidoc.element.cheerio.static.text">
         function <span class="apidocSignatureSpan">cheerio.static.</span>text
@@ -1104,9 +1105,9 @@ $.html()
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.static.xml" id="apidoc.element.cheerio.static.xml">
         function <span class="apidocSignatureSpan">cheerio.static.</span>xml
@@ -1121,15 +1122,15 @@ $.html()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```xml
-$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;5\
-0&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
+$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50
+&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
 ```
 
 ... and later want to render to XML. To do this, you can use the &#x27;xml&#x27; utility function:
 
 ```js
 $.<span class="apidocCodeKeywordSpan">xml</span>()
-//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time\
+//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time
 =&#x22;12:05:01.123&#x22;/&#x3e;
 ```
 
@@ -1139,14 +1140,14 @@ You may also render the text content of a Cheerio object using the `text` static
 $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cheerio.utils" id="apidoc.module.cheerio.utils">module cheerio.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.camelCase" id="apidoc.element.cheerio.utils.camelCase">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>camelCase
@@ -1161,9 +1162,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.cloneDom" id="apidoc.element.cheerio.utils.cloneDom">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>cloneDom
@@ -1176,9 +1177,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.cssCase" id="apidoc.element.cheerio.utils.cssCase">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>cssCase
@@ -1191,9 +1192,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.domEach" id="apidoc.element.cheerio.utils.domEach">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>domEach
@@ -1208,9 +1209,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.isHtml" id="apidoc.element.cheerio.utils.isHtml">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>isHtml
@@ -1228,9 +1229,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.cheerio.utils.isTag" id="apidoc.element.cheerio.utils.isTag">
         function <span class="apidocSignatureSpan">cheerio.utils.</span>isTag
@@ -1244,8 +1245,8 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
