@@ -1,11 +1,13 @@
-# api documentation for  [cheerio (v0.22.0)](https://github.com/cheeriojs/cheerio#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cheerio.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cheerio)
+# api documentation for  [cheerio (v0.22.0)](https://github.com/cheeriojs/cheerio#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cheerio.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cheerio) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cheerio.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cheerio)
 #### Tiny, fast, and elegant implementation of core jQuery designed specifically for the server
 
 [![NPM](https://nodei.co/npm/cheerio.png?downloads=true)](https://www.npmjs.com/package/cheerio)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-cheerio/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-cheerio_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cheerio/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-cheerio/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-cheerio_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cheerio/build..beta..travis-ci.org/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-cheerio/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-cheerio/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-cheerio/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
