@@ -1,37 +1,40 @@
-<svg height="542" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="542" fill="#555" width="720"></rect>
+<svg height="590" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="590" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ cheerio@0.22.0 </tspan>
-<tspan x="10" y="42">  ├─┬ css-select@1.2.0 </tspan>
-<tspan x="10" y="58">  │ ├── boolbase@1.0.0 </tspan>
-<tspan x="10" y="74">  │ ├── css-what@2.1.0 </tspan>
-<tspan x="10" y="90">  │ ├── domutils@1.5.1 </tspan>
-<tspan x="10" y="106">  │ └── nth-check@1.0.1 </tspan>
-<tspan x="10" y="122">  ├─┬ dom-serializer@0.1.0 </tspan>
-<tspan x="10" y="138">  │ └── domelementtype@1.1.3 </tspan>
-<tspan x="10" y="154">  ├── entities@1.1.1 </tspan>
-<tspan x="10" y="170">  ├─┬ htmlparser2@3.9.2 </tspan>
-<tspan x="10" y="186">  │ ├── domelementtype@1.3.0 </tspan>
-<tspan x="10" y="202">  │ ├── domhandler@2.3.0 </tspan>
-<tspan x="10" y="218">  │ ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="234">  │ └─┬ readable-stream@2.2.6 </tspan>
-<tspan x="10" y="250">  │   ├── buffer-shims@1.0.0 </tspan>
-<tspan x="10" y="266">  │   ├── core-util-is@1.0.2 </tspan>
-<tspan x="10" y="282">  │   ├── isarray@1.0.0 </tspan>
-<tspan x="10" y="298">  │   ├── process-nextick-args@1.0.7 </tspan>
-<tspan x="10" y="314">  │   ├── string_decoder@0.10.31 </tspan>
-<tspan x="10" y="330">  │   └── util-deprecate@1.0.2 </tspan>
-<tspan x="10" y="346">  ├── lodash.assignin@4.2.0 </tspan>
-<tspan x="10" y="362">  ├── lodash.bind@4.2.1 </tspan>
-<tspan x="10" y="378">  ├── lodash.defaults@4.2.0 </tspan>
-<tspan x="10" y="394">  ├── lodash.filter@4.6.0 </tspan>
-<tspan x="10" y="410">  ├── lodash.flatten@4.4.0 </tspan>
-<tspan x="10" y="426">  ├── lodash.foreach@4.5.0 </tspan>
-<tspan x="10" y="442">  ├── lodash.map@4.6.0 </tspan>
-<tspan x="10" y="458">  ├── lodash.merge@4.6.0 </tspan>
-<tspan x="10" y="474">  ├── lodash.pick@4.4.0 </tspan>
-<tspan x="10" y="490">  ├── lodash.reduce@4.6.0 </tspan>
-<tspan x="10" y="506">  ├── lodash.reject@4.6.0 </tspan>
-<tspan x="10" y="522">  └── lodash.some@4.6.0</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ cheerio@0.22.0 </tspan>
+<tspan x="10" y="90">  ├─┬ css-select@1.2.0 </tspan>
+<tspan x="10" y="106">  │ ├── boolbase@1.0.0 </tspan>
+<tspan x="10" y="122">  │ ├── css-what@2.1.0 </tspan>
+<tspan x="10" y="138">  │ ├── domutils@1.5.1 </tspan>
+<tspan x="10" y="154">  │ └── nth-check@1.0.1 </tspan>
+<tspan x="10" y="170">  ├─┬ dom-serializer@0.1.0 </tspan>
+<tspan x="10" y="186">  │ └── domelementtype@1.1.3 </tspan>
+<tspan x="10" y="202">  ├── entities@1.1.1 </tspan>
+<tspan x="10" y="218">  ├─┬ htmlparser2@3.9.2 </tspan>
+<tspan x="10" y="234">  │ ├── domelementtype@1.3.0 </tspan>
+<tspan x="10" y="250">  │ ├── domhandler@2.3.0 </tspan>
+<tspan x="10" y="266">  │ ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="282">  │ └─┬ readable-stream@2.2.9 </tspan>
+<tspan x="10" y="298">  │   ├── buffer-shims@1.0.0 </tspan>
+<tspan x="10" y="314">  │   ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="330">  │   ├── isarray@1.0.0 </tspan>
+<tspan x="10" y="346">  │   ├── process-nextick-args@1.0.7 </tspan>
+<tspan x="10" y="362">  │   ├── string_decoder@1.0.0 </tspan>
+<tspan x="10" y="378">  │   └── util-deprecate@1.0.2 </tspan>
+<tspan x="10" y="394">  ├── lodash.assignin@4.2.0 </tspan>
+<tspan x="10" y="410">  ├── lodash.bind@4.2.1 </tspan>
+<tspan x="10" y="426">  ├── lodash.defaults@4.2.0 </tspan>
+<tspan x="10" y="442">  ├── lodash.filter@4.6.0 </tspan>
+<tspan x="10" y="458">  ├── lodash.flatten@4.4.0 </tspan>
+<tspan x="10" y="474">  ├── lodash.foreach@4.5.0 </tspan>
+<tspan x="10" y="490">  ├── lodash.map@4.6.0 </tspan>
+<tspan x="10" y="506">  ├── lodash.merge@4.6.0 </tspan>
+<tspan x="10" y="522">  ├── lodash.pick@4.4.0 </tspan>
+<tspan x="10" y="538">  ├── lodash.reduce@4.6.0 </tspan>
+<tspan x="10" y="554">  ├── lodash.reject@4.6.0 </tspan>
+<tspan x="10" y="570">  └── lodash.some@4.6.0</tspan>
 </text>
 </svg>

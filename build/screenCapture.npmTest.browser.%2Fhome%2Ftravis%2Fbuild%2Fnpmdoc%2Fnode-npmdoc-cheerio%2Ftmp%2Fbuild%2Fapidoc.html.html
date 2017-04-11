@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/cheeriojs/cheerio#readme"
-
-    >cheerio (v0.22.0)</a>
+    <a href="https://github.com/cheeriojs/cheerio#readme">cheerio (v0.22.0)</a>
 </h1>
 <h4>Tiny, fast, and elegant implementation of core jQuery designed specifically for the server</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cheerio">module cheerio</a><ol>
 
@@ -187,14 +180,14 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">contains = function (container, contained) {
 
-  // According to the jQuery API, an element does not &#x22;contain&#x22; itself
+  // According to the jQuery API, an element does not "contain" itself
   if (contained === container) {
     return false;
   }
 
   // Step up the descendants, stopping when the root element is reached
   // (signaled by `.parent` returning a reference to the same object)
-  while (contained &#x26;&#x26; contained !== contained.parent) {
+  while (contained &amp;&amp; contained !== contained.parent) {
     contained = contained.parent;
     if (contained === container) {
       return true;
@@ -207,8 +200,8 @@
 Sometimes you need to work with the top-level root element. To query it, you can use `$.root()`.
 
 ```js
-$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
-//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+$.root().append('&lt;ul id="vegetables"&gt;&lt;/ul&gt;').html();
+//=&gt; &lt;ul id="fruits"&gt;...&lt;/ul&gt;&lt;ul id="vegetables"&gt;&lt;/ul&gt;
 ```
 
 #### $.<span class="apidocCodeKeywordSpan">contains</span>( container, contained )
@@ -219,7 +212,7 @@ Parses a string into an array of DOM nodes. The `context` argument has no meanin
 .
 
 #### $.load( html[, options ] )
-Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+Load in the HTML. (See the previous section titled "Loading" for more information.)
 ...</pre></li>
     </ul>
 
@@ -233,13 +226,13 @@ Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more 
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">html = function (dom, options) {
-  var Cheerio = require(&#x27;./cheerio&#x27;);
+  var Cheerio = require('./cheerio');
 
   // be flexible about parameters, sometimes we call html(),
   // with options as only parameter
   // check dom argument for dom element specific properties
-  // assume there is no &#x27;length&#x27; or &#x27;type&#x27; properties in the options object
-  if (Object.prototype.toString.call(dom) === &#x27;[object Object]&#x27; &#x26;&#x26; !options &#x26;&#x26; !(&#x27;length&#x27; in dom) &#x26;&#x26; !(&#x27;type&#x27; in dom))
+  // assume there is no 'length' or 'type' properties in the options object
+  if (Object.prototype.toString.call(dom) === '[object Object]' &amp;&amp; !options &amp;&amp; !('length' in dom) &amp;&amp; !('type' in dom))
   {
     options = dom;
     dom = undefined;
@@ -253,14 +246,14 @@ Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more 
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
-let cheerio = require(&#x27;cheerio&#x27;)
-let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+let cheerio = require('cheerio')
+let $ = cheerio.load('&lt;h2 class="title"&gt;Hello world&lt;/h2&gt;')
 
-$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
-$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+$('h2.title').text('Hello there!')
+$('h2').addClass('welcome')
 
 $.<span class="apidocCodeKeywordSpan">html</span>()
-//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+//=&gt; &lt;h2 class="title welcome"&gt;Hello there!&lt;/h2&gt;
 ```
 
 ## Installation
@@ -280,7 +273,7 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">load = function (content, options) {
-  var Cheerio = require(&#x27;./cheerio&#x27;);
+  var Cheerio = require('./cheerio');
 
   options = _.defaults(options || {}, Cheerio.prototype.options);
 
@@ -294,16 +287,16 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
     return Cheerio.call(this, selector, context, r || root, opts);
   };
 
-  // Ensure that selections created by the &#x22;loaded&#x22; `initialize` function are
+  // Ensure that selections created by the "loaded" `initialize` function are
   // true Cheerio instances.
   initialize.prototype = Object.create(Cheerio.prototype);
   initialize.prototype.constructor = initialize;
 
-  // Mimic jQuery&#x27;s prototype alias for plugin authors.
+  // Mimic jQuery's prototype alias for plugin authors.
   initialize.fn = initialize.prototype;
 
   // Keep a reference to the top-level scope so we can chain methods that implicitly
-  // resolve selectors; e.g. $(&#x22;&#x3c;span&#x3e;&#x22;).(&#x22;.bar&#x22;), which otherwise loses ._root
+  // resolve selectors; e.g. $("&lt;span&gt;").(".bar"), which otherwise loses ._root
   initialize.prototype._originalRoot = root;
 
   // Add in the static methods
@@ -317,21 +310,21 @@ $.<span class="apidocCodeKeywordSpan">html</span>()
   return initialize;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  &#x3c;/a&#x3e;
-&#x3c;/div&#x3e;
+  &lt;/a&gt;
+&lt;/div&gt;
 
-&#x3c;br /&#x3e;
+&lt;br /&gt;
 
 ```js
-let cheerio = require(&#x27;cheerio&#x27;)
-let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2
-&#x3e;&#x27;)
+let cheerio = require('cheerio')
+let $ = cheerio.<span class="apidocCodeKeywordSpan">load</span>('&lt;h2 class="title"&gt;Hello world&lt;/h2
+&gt;')
 
-$(&#x27;h2.title&#x27;).text(&#x27;Hello there!&#x27;)
-$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+$('h2.title').text('Hello there!')
+$('h2').addClass('welcome')
 
 $.html()
-//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+//=&gt; &lt;h2 class="title welcome"&gt;Hello there!&lt;/h2&gt;
 ```
 ...</pre></li>
     </ul>
@@ -348,9 +341,9 @@ $.html()
     <li>description and source-code<pre class="apidocCodePre">parse = function (content, options) {
   var dom = exports.evaluate(content, options),
       // Generic root element
-      root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+      root = exports.evaluate('&lt;root&gt;&lt;/root&gt;', options)[0];
 
-  root.type = &#x27;root&#x27;;
+  root.type = 'root';
 
   // Update the dom using the root
   exports.update(dom, root);
@@ -372,17 +365,17 @@ $.html()
     <li>description and source-code<pre class="apidocCodePre">parseHTML = function (data, context, keepScripts) {
   var parsed;
 
-  if (!data || typeof data !== &#x27;string&#x27;) {
+  if (!data || typeof data !== 'string') {
     return null;
   }
 
-  if (typeof context === &#x27;boolean&#x27;) {
+  if (typeof context === 'boolean') {
     keepScripts = context;
   }
 
   parsed = this.load(data);
   if (!keepScripts) {
-    parsed(&#x27;script&#x27;).remove();
+    parsed('script').remove();
   }
 
   // The `children` array is used by Cheerio internally to group elements that
@@ -393,8 +386,8 @@ $.html()
   return parsed.root()[0].children.slice();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
-//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+$.root().append('&lt;ul id="vegetables"&gt;&lt;/ul&gt;').html();
+//=&gt; &lt;ul id="fruits"&gt;...&lt;/ul&gt;&lt;ul id="vegetables"&gt;&lt;/ul&gt;
 ```
 
 #### $.contains( container, contained )
@@ -405,7 +398,7 @@ Parses a string into an array of DOM nodes. The `context` argument has no meanin
 .
 
 #### $.load( html[, options ] )
-Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more information.)
+Load in the HTML. (See the previous section titled "Loading" for more information.)
 
 ### Plugins
 ...</pre></li>
@@ -424,7 +417,7 @@ Load in the HTML. (See the previous section titled &#x22;Loading&#x22; for more 
   return this(this._root);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var moreFruit = $(&#x27;#fruits&#x27;).clone()
+var moreFruit = $('#fruits').clone()
 ```
 
 ### Utilities
@@ -435,8 +428,8 @@ Sometimes you need to work with the top-level root element. To query it, you can
 </span>()`.
 
 ```js
-$.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x27;).html();
-//=&#x3e; &#x3c;ul id=&#x22;fruits&#x22;&#x3e;...&#x3c;/ul&#x3e;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;
+$.root().append('&lt;ul id="vegetables"&gt;&lt;/ul&gt;').html();
+//=&gt; &lt;ul id="fruits"&gt;...&lt;/ul&gt;&lt;ul id="vegetables"&gt;&lt;/ul&gt;
 ```
 
 #### $.contains( container, contained )
@@ -457,14 +450,14 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
     elems = this.root();
   }
 
-  var ret = &#x27;&#x27;,
+  var ret = '',
       len = elems.length,
       elem;
 
-  for (var i = 0; i &#x3c; len; i++) {
+  for (var i = 0; i &lt; len; i++) {
     elem = elems[i];
-    if (elem.type === &#x27;text&#x27;) ret += elem.data;
-    else if (elem.children &#x26;&#x26; elem.type !== &#x27;comment&#x27;) {
+    if (elem.type === 'text') ret += elem.data;
+    else if (elem.children &amp;&amp; elem.type !== 'comment') {
       ret += exports.text(elem.children);
     }
   }
@@ -473,17 +466,17 @@ $.root().append(&#x27;&#x3c;ul id=&#x22;vegetables&#x22;&#x3e;&#x3c;/ul&#x3e;&#x
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-&#x3c;br /&#x3e;
+&lt;br /&gt;
 
 ```js
-let cheerio = require(&#x27;cheerio&#x27;)
-let $ = cheerio.load(&#x27;&#x3c;h2 class=&#x22;title&#x22;&#x3e;Hello world&#x3c;/h2&#x3e;&#x27;)
+let cheerio = require('cheerio')
+let $ = cheerio.load('&lt;h2 class="title"&gt;Hello world&lt;/h2&gt;')
 
-$(&#x27;h2.title&#x27;).<span class="apidocCodeKeywordSpan">text</span>(&#x27;Hello there!&#x27;)
-$(&#x27;h2&#x27;).addClass(&#x27;welcome&#x27;)
+$('h2.title').<span class="apidocCodeKeywordSpan">text</span>('Hello there!')
+$('h2').addClass('welcome')
 
 $.html()
-//=&#x3e; &#x3c;h2 class=&#x22;title welcome&#x22;&#x3e;Hello there!&#x3c;/h2&#x3e;
+//=&gt; &lt;h2 class="title welcome"&gt;Hello there!&lt;/h2&gt;
 ```
 
 ## Installation
@@ -506,22 +499,22 @@ $.html()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```xml
-$ = cheerio.load(&#x27;&#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50
-&#x22; time=&#x22;12:05:01.123&#x22;/&#x3e;&#x27;);
+$ = cheerio.load('&lt;media:thumbnail url="http://www.foo.com/keyframe.jpg" width="75" height="50
+" time="12:05:01.123"/&gt;');
 ```
 
-... and later want to render to XML. To do this, you can use the &#x27;xml&#x27; utility function:
+... and later want to render to XML. To do this, you can use the 'xml' utility function:
 
 ```js
 $.<span class="apidocCodeKeywordSpan">xml</span>()
-//=&#x3e;  &#x3c;media:thumbnail url=&#x22;http://www.foo.com/keyframe.jpg&#x22; width=&#x22;75&#x22; height=&#x22;50&#x22; time
-=&#x22;12:05:01.123&#x22;/&#x3e;
+//=&gt;  &lt;media:thumbnail url="http://www.foo.com/keyframe.jpg" width="75" height="50" time
+="12:05:01.123"/&gt;
 ```
 
 You may also render the text content of a Cheerio object using the `text` static method:
 
 ```js
-$ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
+$ = cheerio.load('This is &lt;em&gt;content&lt;/em&gt;.')
 ...</pre></li>
     </ul>
 
@@ -544,9 +537,9 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
     <li>description and source-code<pre class="apidocCodePre">parse = function (content, options) {
   var dom = exports.evaluate(content, options),
       // Generic root element
-      root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+      root = exports.evaluate('&lt;root&gt;&lt;/root&gt;', options)[0];
 
-  root.type = &#x27;root&#x27;;
+  root.type = 'root';
 
   // Update the dom using the root
   exports.update(dom, root);
@@ -570,7 +563,7 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 
   var dom;
 
-  if (typeof content === &#x27;string&#x27; || Buffer.isBuffer(content)) {
+  if (typeof content === 'string' || Buffer.isBuffer(content)) {
     dom = htmlparser.parseDOM(content, options);
   } else {
     dom = content;
@@ -580,7 +573,7 @@ $ = cheerio.load(&#x27;This is &#x3c;em&#x3e;content&#x3c;/em&#x3e;.&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 */
-var htmlparser = require(&#x27;htmlparser2&#x27;);
+var htmlparser = require('htmlparser2');
 
 /*
 Parser
@@ -588,9 +581,9 @@ Parser
 exports = module.exports = function(content, options) {
 var dom = exports.<span class="apidocCodeKeywordSpan">evaluate</span>(content, options),
     // Generic root element
-    root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+    root = exports.evaluate('&lt;root&gt;&lt;/root&gt;', options)[0];
 
-root.type = &#x27;root&#x27;;
+root.type = 'root';
 
 // Update the dom using the root
 exports.update(dom, root);
@@ -618,13 +611,13 @@ exports.update(dom, root);
   }
 
   // Update neighbors
-  for (var i = 0; i &#x3c; arr.length; i++) {
+  for (var i = 0; i &lt; arr.length; i++) {
     var node = arr[i];
 
     // Cleanly remove existing nodes from their previous structures.
     var oldParent = node.parent || node.root,
-        oldSiblings = oldParent &#x26;&#x26; oldParent.children;
-    if (oldSiblings &#x26;&#x26; oldSiblings !== arr) {
+        oldSiblings = oldParent &amp;&amp; oldParent.children;
+    if (oldSiblings &amp;&amp; oldSiblings !== arr) {
       oldSiblings.splice(oldSiblings.indexOf(node), 1);
       if (node.prev) {
         node.prev.next = node.next;
@@ -641,7 +634,7 @@ exports.update(dom, root);
       node.prev = node.next = null;
     }
 
-    if (parent &#x26;&#x26; parent.type === &#x27;root&#x27;) {
+    if (parent &amp;&amp; parent.type === 'root') {
       node.root = parent;
       node.parent = null;
     } else {
@@ -655,9 +648,9 @@ exports.update(dom, root);
     <li>example usage<pre class="apidocCodePre">...
 var dom = exports.evaluate(content, options),
     // Generic root element
-    root = exports.evaluate(&#x27;&#x3c;root&#x3e;&#x3c;/root&#x3e;&#x27;, options)[0];
+    root = exports.evaluate('&lt;root&gt;&lt;/root&gt;', options)[0];
 
-root.type = &#x27;root&#x27;;
+root.type = 'root';
 
 // Update the dom using the root
 exports.<span class="apidocCodeKeywordSpan">update</span>(dom, root);
@@ -679,3 +672,4 @@ exports.evaluate = function(content, options) {
     ]
 </div>
 </div>
+</body></html>
